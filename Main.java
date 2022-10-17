@@ -1,6 +1,9 @@
 class main {
   public static void main(String[] args) {
 
+    int names = myScannerinput.nextInt();
+    Scanner myScanner =null;
+
     System.out.println("Press 1 to learn about salary.");
     System.out.println("Press 2 to learn about the job.");
     System.out.println("Press 3 to learn about demand.");
@@ -12,7 +15,7 @@ class main {
 
         while (choiceEntry != 5) {
 
-        else if (choiceEntry < 1 || choiceEntry > 5) {
+        if(choiceEntry < 1 || choiceEntry > 5) {
         choiceentry = scanchoice.nextInt(); 
         }
 
@@ -25,8 +28,8 @@ class main {
         else if(choiceEntry == 3) {
         System.out.println("Top 10 Forbes In-Demand Jobs!");
         }
-        else if(choiceEntry == 4) {
-        String content = new String(Files.readAllBytes(Paths.get("names.txt")));
+        else(choiceEntry == 4) {
+        myScanner = new Scanner(new File("names.txt"));
       }
     }
   }
