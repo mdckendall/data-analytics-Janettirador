@@ -7,25 +7,27 @@ class main {
     System.out.println("Press 4 to view current students.");
     System.out.println("Press 5 to quit.");
 
-        int choiceEntry;
-    do {
-      System.out.println("");
-        switch (choiceEntry)
-    {
-          case 1:
-            System.out.println("$98,345 average salary in south Florida!");
-            break;
-          case 2: 
-             System.out.println("US News - 100 Best Jobs!");
-            break;
-          case 3: 
-            System.out.println("Top 10 Forbes In-Demand Jobs!");
-            break;
-          case 4:
-            System.out.println("Top 10 Forbes In-Demand Jobs!");
-          default:
-            System.out.println("");
-      }   
-    }   while (choiceEntry != 5);
+      Scanner scanchoice = newScanner(System.in);
+      int choiceEntry = scanchoice.nextInt();
+
+        while (choiceEntry != 5) {
+
+        else if (choiceEntry < 1 || choiceEntry > 5) {
+        choiceentry = scanchoice.nextInt(); 
+        }
+
+        else if(choiceEntry == 1) {
+        System.out.println("$98,345 average salary in south Florida!");
+        }
+        else if(choiceEntry == 2) {
+        System.out.println("US News - 100 Best Jobs!");
+        }
+        else if(choiceEntry == 3) {
+        System.out.println("Top 10 Forbes In-Demand Jobs!");
+        }
+        else if(choiceEntry == 4) {
+        String content = new String(Files.readAllBytes(Paths.get("names.txt")));
+      }
+    }
   }
 }
